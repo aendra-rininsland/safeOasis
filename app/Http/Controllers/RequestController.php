@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -17,7 +18,8 @@ class RequestController extends Controller
      */
     public function index()
     {
-        return view('request', ['location' => new LocationRequest]);
+        $requests = App\LocationRequest::all();
+        return view('request-map', ['requests' => $requests]);
     }
 
     /**
@@ -27,7 +29,7 @@ class RequestController extends Controller
      */
     public function create()
     {
-        //
+        return view('request');
     }
 
     /**
@@ -38,7 +40,14 @@ class RequestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        App\LocationRequest::create(
+            [
+                'fulfilled' => false,
+                'coords' => $request->input('coords'),
+            ]
+        );
+
+        return view('updated');
     }
 
     /**
@@ -49,7 +58,8 @@ class RequestController extends Controller
      */
     public function show($id)
     {
-        //
+        $request = App\LocationRequest::findOrFail($id);
+        return view('request-detail', ['request' => $request]);
     }
 
     /**
@@ -60,7 +70,8 @@ class RequestController extends Controller
      */
     public function edit($id)
     {
-        //
+        $request = App\LocationRequest::findOrFail($id);
+        return view('request', ['request' => $request]);
     }
 
     /**
@@ -72,7 +83,11 @@ class RequestController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $location = App\LocationRequest::findOrFail($id);
+        $location->fulfilled = $request->input('fulfilled');
+        $location->save();
+
+        return view('updated');
     }
 
     /**

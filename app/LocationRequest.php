@@ -14,7 +14,6 @@ class LocationRequest extends Model
     }
 
     public function getCoordinatesAttribute($value){
-
         $loc =  substr($value, 6);
         $loc = preg_replace('/[ ,]+/', ',', $loc, 1);
 
