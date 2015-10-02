@@ -19,9 +19,7 @@ Route::get('/refuge', function () {
     return view('refuge');
 });
 
-Route::get('/refuge/request-location', function () {
-    return view('request-location');
-});
+Route::get('/refuge/request-location', 'RequestController@index');
 
 Route::get('/refuge/nearest-depot', function () {
     return view('nearest-depot');
