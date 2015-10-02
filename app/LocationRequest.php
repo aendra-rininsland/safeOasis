@@ -8,6 +8,7 @@ class LocationRequest extends Model
 {
     protected $geofields = array('coords');
 
+    protected $fillable = array('fulfilled', 'location_plaintext', 'contact_number', 'num_women', 'num_children');
 
     public function setCoordinatesAttribute($value) {
         $this->attributes['coords'] = DB::raw("POINT($value)");
