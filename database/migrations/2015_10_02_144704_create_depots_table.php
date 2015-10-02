@@ -19,7 +19,7 @@ class CreateDepotsTable extends Migration
             $table->string('contact_name');
             $table->string('contact_phone_number');
         });
-        DB::statement('ALTER TABLE depots ADD location POINT' );
+        DB::statement('ALTER TABLE depots ADD coords POINT' );
     }
 
     /**

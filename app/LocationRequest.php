@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Location extends Model
+class LocationRequest extends Model
 {
     protected $geofields = array('coords');
 
@@ -26,10 +26,6 @@ class Location extends Model
         return $query->whereRaw('st_distance(coords,POINT('.$location.')) < '.$dist);
     }
 
-    public function getWhat3Words($value){
-
-    }
-
     public function newQuery($excludeDeleted = true)
     {
         $raw='';
@@ -40,13 +36,8 @@ class Location extends Model
         return parent::newQuery($excludeDeleted)->addSelect('*',DB::raw($raw));
     }
 
-    public function depot()
+    public function location()
     {
-        return $this->belongsTo('App\Depot');
-    }
-
-    public function requestedBy()
-    {
-        return $this->belongsTo('App\Depot');
+        return $this->hasOne('App\Location');
     }
 }

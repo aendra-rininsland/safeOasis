@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLocationsTable extends Migration
+class CreateLocationRequestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateLocationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('locations', function (Blueprint $table) {
+        Schema::create('location_requests', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->boolean('active');
+            $table->boolean('fulfilled');
         });
-        DB::statement('ALTER TABLE locations ADD coords POINT' );
+        DB::statement('ALTER TABLE location_requests ADD coords POINT' );
     }
 
     /**
@@ -27,6 +27,6 @@ class CreateLocationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('locations');
+        Schema::drop('location_requests');
     }
 }
