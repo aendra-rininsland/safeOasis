@@ -8,25 +8,32 @@
                 <h2>Fill in the short form below to request a SleepSpace kit.</h2>
                 <br /><br />
                 
-                <form name="/refuge/request-starterpack" id="requestForm" method="post" novalidate>
+                <form action="/refuge/request-location" id="requestForm" method="post" novalidate>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Location</label>
+                            <input type="text" class="form-control" placeholder="Location" id="location" name="location_plaintext" required data-validation-required-message="Please enter your number">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Phone number</label>
-                            <input type="text" class="form-control" placeholder="Phone Number" id="phone-number" name="phone-number" required data-validation-required-message="Please enter your number">
+                            <input type="text" class="form-control" placeholder="Phone Number" id="phone-number" name="contact_number" required data-validation-required-message="Please enter your number">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Number of women in your group <i>(optional)</i></label>
-                            <input type="number" class="form-control" placeholder="Number of women" id="num-women" name="num-women">
+                            <label>Number of women</label>
+                            <input type="number" class="form-control" placeholder="Number of women in your group (optional)" id="num-women" name="num_women">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Number of childrenin your group <i>(optional)</i></label>
-                            <input type="number" class="form-control" placeholder="Number of children" id="num-children" name="num-children">
+                            <label>Number of children</label>
+                            <input type="number" class="form-control" placeholder="Number of children in your group (optional)" id="num-children" name="num_children">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

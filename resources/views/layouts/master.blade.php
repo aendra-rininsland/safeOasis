@@ -54,7 +54,7 @@
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/refuge/request-starterpack">Request Kit</a>
+                        <a href="/refuge/request-location">Request Kit</a>
                     </li>
                 </ul>
             </div>
@@ -73,6 +73,9 @@
                         <h1>SleepSpace</h1>
                         <hr class="small">
                         <span class="subheading">Kits to create safe spaces for refugees</span>
+    <div class="col-lg-12" style="text-align: center; margin-top: 20px;">
+       <button class="btn-default btn btn-lg" onclick="window.location = '/refuge/request-location'; return false;">Click here to request a kit</button>
+    </div>
                     </div>
                 </div>
             </div>
