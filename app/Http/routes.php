@@ -27,7 +27,7 @@ Route::get('/refuge/nearest-depot', function () {
 });
 
 Route::get('/refuge/request-starterpack', function () {
-    return view('request-starterpack');
+    return view('request');
 });
 
 Route::get('/report', function () {
