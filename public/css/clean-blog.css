@@ -26,11 +26,11 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #404040;
+  color: #fe0079;
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #f10072;
 }
 a img:hover,
 a img:focus {
@@ -74,7 +74,7 @@ hr.small {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(254, 0, 114 0.8);
   }
   .navbar-custom .nav li a {
     color: white;
@@ -82,7 +82,7 @@ hr.small {
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(254, 0, 114, 0.8);
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -103,25 +103,25 @@ hr.small {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #f2f2f2;
+    background-color: rgba(254, 0, 114, 0.9);
+    border-bottom: 1px solid #fe0079;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
   }
   .navbar-custom.is-fixed .navbar-brand {
-    color: #404040;
+    color: #FFF;
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
+    color: #EEE;
   }
   .navbar-custom.is-fixed .nav li a {
-    color: #404040;
+    color: #FFF;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: #EEE;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -152,7 +152,7 @@ hr.small {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 200px 0;
+    padding: 220px 0;
   }
 }
 .intro-header .site-heading,
@@ -211,12 +211,12 @@ hr.small {
   }
 }
 .post-preview > a {
-  color: #404040;
+  color: #fe0074;
 }
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: #f10072;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
