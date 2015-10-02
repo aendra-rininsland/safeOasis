@@ -17,7 +17,7 @@ class RequestController extends Controller
      */
     public function index()
     {
-        return view('location-request', ['location' => new LocationRequest]);
+        return view('request', ['location' => new LocationRequest]);
     }
 
     /**
