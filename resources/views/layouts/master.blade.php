@@ -54,7 +54,7 @@
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/refuge/nearest-depot">Find Depot</a>
+                        <a href="/refuge/request-starterpack">Request Kit</a>
                     </li>
                 </ul>
             </div>
