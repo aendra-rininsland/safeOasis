@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/refuge', function () {
+    return view('home');
+});
+
+Route::get('/report', function () {
+    return view('home');
+});
+
+Route::get('/recovery', function () {
+    return view('home');
 });
