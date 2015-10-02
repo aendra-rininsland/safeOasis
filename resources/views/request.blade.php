@@ -5,9 +5,10 @@
 @section('content')
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Fill in the short form below to request a SleepSpace kit.</p>
+                <h2>Fill in the short form below to request a SleepSpace kit.</h2>
+                <br /><br />
                 
-                <form name="/refuge/request-starterpack" id="contactForm" novalidate>
+                <form name="/refuge/request-starterpack" id="requestForm" method="post" novalidate>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Phone number</label>
@@ -30,10 +31,11 @@
                         </div>
                     </div>
                     <br>
+                    {!! csrf_field() !!}
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-default">Send</button>
+                            <input type="submit" class="btn btn-default" value="Request SleepSpace Kit">
                         </div>
                     </div>
                 </form>
