@@ -16,6 +16,10 @@ class CreateLocationRequestsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->boolean('fulfilled');
+            $table->string('location_plaintext');
+            $table->string('contact_number');
+            $table->integer('num_women');
+            $table->integer('num_children');
         });
         DB::statement('ALTER TABLE location_requests ADD coords POINT' );
     }

@@ -43,7 +43,11 @@ class RequestController extends Controller
         App\LocationRequest::create(
             [
                 'fulfilled' => false,
-                'coords' => $request->input('coords'),
+                // 'coords' => $request->input('coords'),
+                'location_plaintext' => $request->input('location_plaintext'),
+                'contact_number' =>  $request->input('contact_number'),
+                'num_women' =>  $request->input('num_women'),
+                'num_children' =>  $request->input('num_children'),
             ]
         );
 
@@ -85,6 +89,10 @@ class RequestController extends Controller
     {
         $location = App\LocationRequest::findOrFail($id);
         $location->fulfilled = $request->input('fulfilled');
+        $location->location_plaintext = $request->input('location_plaintext'),
+        $location->contact_number =  $request->input('contact_number'),
+        $location->num_women =  $request->input('num_women'),
+        $location->num_children =  $request->input('num_children'),
         $location->save();
 
         return view('updated');

@@ -20,14 +20,14 @@ Route::get('/refuge', function () {
 });
 
 Route::get('/refuge/request-location', 'RequestController@create');
-Route::post('/refuge/request-location', 'RequestController@update');
+Route::post('/refuge/request-location', 'RequestController@store');
 
 Route::get('/refuge/nearest-depot', function () {
     return view('nearest-depot');
 });
 
 Route::get('/refuge/request-starterpack', function () {
-    return view('request');
+    return view('request-starterpack');
 });
 
 Route::get('/report', function () {
