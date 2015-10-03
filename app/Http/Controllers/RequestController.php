@@ -85,7 +85,7 @@ class RequestController extends Controller
     
     $twilio = new \Aloha\Twilio\Twilio($AccountSid, $AuthToken, $fromNumber);
 
-    $twilio->message($request->input('contact_number'), 'Thank you for sending your request for a SleepSpace from ' . $request->input('location_plaintext') . ', please go to The Jungle depot to pick it up');
+    //$twilio->message($request->input('contact_number'), 'Thank you for sending your request for a SleepSpace from ' . $request->input('location_plaintext') . ', please go to The Jungle depot to pick it up');
 /*
     foreach ($people as $number => $name) {
  
